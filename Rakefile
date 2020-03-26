@@ -16,8 +16,8 @@ desc "Update TinyMCE to version #{TinyMCE::Rails::TINYMCE_VERSION}"
 task :update => [ :fetch, :extract, :rename ]
 
 task :fetch do
-  download("http://download.ephox.com/tinymce/community/tinymce_#{TinyMCE::Rails::TINYMCE_VERSION}.zip", "tinymce.zip")
-  download("http://download.ephox.com/tinymce/community/tinymce_#{TinyMCE::Rails::TINYMCE_VERSION}_dev.zip", "tinymce.dev.zip")
+  download("https://github.com/mshalaby/tinymce/releases/download/#{TinyMCE::Rails::TINYMCE_VERSION}-turbolinks/tinymce.zip", "tinymce.zip")
+  download("https://github.com/mshalaby/tinymce/releases/download/#{TinyMCE::Rails::TINYMCE_VERSION}-turbolinks/tinymce_dev.zip", "tinymce.dev.zip")
 end
 
 task :extract do
