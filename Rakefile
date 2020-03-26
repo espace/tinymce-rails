@@ -13,7 +13,7 @@ def download(url, filename)
 end
 
 desc "Update TinyMCE to version #{TinyMCE::Rails::TINYMCE_VERSION}"
-task :update => [ :fetch, :extract, :rename ]
+task :update => [ :fetch, :extract ]
 
 task :fetch do
   download("https://github.com/mshalaby/tinymce/releases/download/#{TinyMCE::Rails::TINYMCE_VERSION}-turbolinks/tinymce.zip", "tinymce.zip")
